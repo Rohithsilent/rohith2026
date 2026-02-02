@@ -84,10 +84,12 @@ export default function Projects() {
                           <ExternalLink className="w-4 h-4" />
                         </a>
                       )}
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-foreground/50 hover:text-accent transition-colors duration-300">
-                        <span className="hidden md:inline">Live</span>
-                        <Globe className="w-4 h-4" />
-                      </a>
+                      {project.live && project.live !== "Private" && (
+                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-foreground/50 hover:text-accent transition-colors duration-300">
+                          <span className="hidden md:inline">Live</span>
+                          <Globe className="w-4 h-4" />
+                        </a>
+                      )}
                     </div>
                   </div>
 
@@ -178,7 +180,7 @@ export default function Projects() {
 
               {/* Header Row: Live Btn & Stack */}
               <div className="flex justify-between items-center w-full" style={{ padding: '10px' }}>
-                {selectedProject.live && (
+                {selectedProject.live && selectedProject.live !== "Private" && (
                   <a
                     href={selectedProject.live}
                     target="_blank"

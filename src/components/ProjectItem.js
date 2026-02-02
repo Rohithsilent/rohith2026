@@ -69,7 +69,7 @@ export default function ProjectItem({ project, index }) {
                             </a>
                         )}
 
-                        {project.live && project.live !== "#" && (
+                        {project.live && project.live !== "#" && project.live !== "Private" && (
                             <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn-live hover:bg-accent hover:text-white hover:border-accent">
                                 <LinkIcon size={16} className="w-4 h-4" />
                                 <span>Visit Site</span>

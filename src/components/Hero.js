@@ -224,7 +224,7 @@ export default function Hero() {
               style={{ fontFamily: "var(--font-instrument-serif)" }}
             >
               <span className="absolute -inset-0.5 rounded-md bg-accent/0 group-hover:bg-accent/10 blur-sm transition-all duration-300 -z-10"></span>
-              Flutter Developer & Applied ML Developer
+              Flutter Developer & Applied ML Engineer
             </motion.span>{" "}
             focused on building{" "}
             <span className="text-accent font-medium">
