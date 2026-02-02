@@ -100,7 +100,7 @@ export default function Skills() {
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 className="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_rgba(216,207,188,0.6)]"
               />
-              <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-accent font-medium">ML/AI</h3>
+              <h3 className="text-sm font-mono uppercase tracking-[0.2em] text-accent font-medium">AI/ML</h3>
             </div>
             <div className="flex flex-wrap gap-3">
               {[

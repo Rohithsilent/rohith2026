@@ -24,7 +24,7 @@ export default function Education() {
 
     return (
         <section id="education" className="space-y-16 py-12 mt-20 mb-48">
-            <div className="flex flex-col items-center justify-center text-center mb-20 w-full">
+            <div className="flex flex-col items-center justify-center text-center mb-32 w-full">
                 <h2 className="text-4xl md:text-5xl font-medium tracking-tight" style={{ fontFamily: 'var(--font-outfit)' }}>Education</h2>
             </div>
 

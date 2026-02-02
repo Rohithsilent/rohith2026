@@ -12,6 +12,7 @@ import Image from "next/image";
 import { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import imgFace from "../assets/images/facecutouut.jpg";
 import imgFace2 from "../assets/images/facecutout2.jpg";
+import rohith from "../assets/images/rohith.jpeg";
 
 export default function Hero() {
   const mouseX = useMotionValue(0);
@@ -77,7 +78,7 @@ export default function Hero() {
                         className="absolute inset-0"
                       >
                         <Image
-                          src={showAltImage ? imgFace2 : imgFace}
+                          src={showAltImage ? imgFace2 : rohith}
                           alt="Rohith"
                           fill
                           className="object-cover grayscale"
@@ -114,7 +115,7 @@ export default function Hero() {
                         className="absolute inset-0"
                       >
                         <Image
-                          src={showAltImage ? imgFace2 : imgFace}
+                          src={showAltImage ? imgFace2 : rohith}
                           alt="Rohith Color"
                           fill
                           className="object-cover"
