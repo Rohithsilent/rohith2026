@@ -1,0 +1,472 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Default to Dark Theme (Black Theme) */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.85 0.02 80);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --radius: 0.625rem;
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+.light {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --accent: oklch(0.45 0.04 80);
+  --accent-foreground: oklch(0.985 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-destructive: var(--destructive);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    var(--font-hanken-grotesk),
+    system-ui,
+    -apple-system,
+    sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Noise Texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 50;
+  filter: contrast(120%) brightness(120%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Premium Animations */
+@keyframes reveal {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(20px);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.glass {
+  background: rgba(86, 84, 73, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+.hover-trigger:hover .hover-target {
+  transform: translateY(-5px);
+  color: var(--accent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card);
+  border-radius: 10px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.dark {
+  /* .dark is same as :root now, kept for explicit toggle if needed */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Main title - Instrument Serif for elegance */
+  h1 {
+    font-family: var(--font-instrument-serif), serif;
+  }
+
+  /* Section headings - Hanken Grotesk for modern look */
+  h2 {
+    font-family: var(--font-hanken-grotesk), sans-serif;
+  }
+
+  /* Subheadings - Instrument Serif for contrast */
+  h3 {
+    font-family: var(--font-instrument-serif), serif;
+  }
+
+  /* Monospace elements - Space Mono */
+  .font-mono {
+    font-family: var(--font-space-mono), monospace;
+  }
+
+  /* Body text - Hanken Grotesk */
+  p,
+  span,
+  div {
+    font-family: var(--font-hanken-grotesk), sans-serif;
+  }
+}
+
+/* Custom Stack Tag Component */
+.stack-tag {
+  @apply text-[10px] font-mono py-1 px-1 rounded-md transition-all duration-300 border;
+
+  /* Default (Dark Theme) */
+  /* Using explicit colors as requested: White in dark */
+  @apply border-white/10 bg-white/5 text-white;
+
+  /* Hover Effects */
+  @apply hover:border-accent/20 hover:text-accent;
+}
+
+/* Light Theme Override */
+:is(.light *) .stack-tag {
+  /* Black in light mode */
+  @apply border-black/10 bg-black/5 text-black;
+
+  /* Hover Effects for Light Mode (same accent usually, but ensuring it applies) */
+  @apply hover:border-accent/20 hover:text-accent;
+}
+
+.card-live {
+  padding: 10px;
+}
+
+/* View Live Button - Theme Aware */
+.btn-live {
+  @apply px-6 py-2 rounded-full border text-sm font-medium tracking-wide flex items-center gap-2.5 transition-all duration-300;
+
+  /* Dark Theme (Default) */
+  @apply bg-[#1a1a1a] border-white/10 text-white;
+  @apply hover:bg-white/10 hover:text-white hover:border-white/30;
+}
+
+/* Light Theme Override */
+:is(.light *) .btn-live {
+  /* White button in light mode */
+  @apply bg-white border-black/10 text-black;
+  @apply hover:bg-black/5 hover:text-black hover:border-black/20;
+}
+
+/* Gallery/Camera Button */
+.btn-gallery {
+  @apply p-3 rounded-full transition-all duration-300;
+
+  /* Default State */
+  @apply bg-accent/10 text-accent;
+}
+
+.btn-gallery:hover {
+  @apply p-4 bg-[#e9204f] text-white;
+}
+
+.btn-gallery.active {
+  @apply bg-accent text-background;
+}
+
+/* Ensure active state doesn't get overridden by hover colors if that was the intent, 
+   but original code didn't apply hover colors to active state. 
+   However, originally padding expanion WAS applied to active state.
+   The CSS above applies padding expansion to both (since .btn-gallery:hover matches).
+   It also applies bg-[#e9204f] to active on hover because specificity is equal/similar?
+   Actually .btn-gallery:hover has higher specificity than .btn-gallery.active? 
+   No, class+pseudo vs class+class.
+   Let's make sure active state stays active color on hover if desired. 
+   Original code: if active return "bg-accent...", else return "hover:bg...".
+   So active state did NOT have hover colors.
+*/
+.btn-gallery.active:hover {
+  @apply bg-accent text-background;
+  /* Keep active color on hover */
+}
+
+.achievement {
+  padding: 20px;
+}
+
+.project-button {
+  @apply relative z-10 px-6 py-2.5 rounded-full bg-accent/5 border border-accent/10 backdrop-blur-md text-foreground/80 font-mono text-sm font-bold tracking-widest uppercase shadow-lg transition-all duration-300;
+
+  /* Hover Effects */
+  @apply hover:bg-accent hover:text-[#e9204f] hover:shadow-accent/25 hover:-translate-y-1;
+}
+
+/* Light Theme Override for Project Button */
+:is(.light *) .project-button {
+  @apply hover:bg-[#e9204f] hover:text-white;
+}
+
+.open-source {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Custom Fancy Button using User Template Style */
+.fancy-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  width: 8rem;
+  height: auto;
+}
+
+.fancy-button .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #fff;
+  /* Dark mode optimized: White circle */
+  border-radius: 1.625rem;
+}
+
+.fancy-button .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  color: #000;
+  /* Icon color inside white circle */
+}
+
+.fancy-button .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.fancy-button .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #000;
+  /* Arrow head */
+  border-right: 0.125rem solid #000;
+  transform: rotate(45deg);
+}
+
+.fancy-button .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0 0 0 2.5rem;
+  color: #fff;
+  /* Rest state text color (white on dark background) */
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.fancy-button:hover .circle {
+  width: 100%;
+  background-color: #8957e5;
+}
+
+.fancy-button:hover .circle .icon {
+  transform: translate(-50%, -50%);
+  /* Keep icon centered and stationary on hover */
+}
+
+.fancy-button:hover .button-text {
+  opacity: 0;
+  /* Hide text on hover, show only icon */
+}
+
+/* Light Mode Override for Fancy Button */
+:is(.light *) .fancy-button .button-text {
+  color: #000;
+  /* Black text in light mode */
+}
+
+:is(.light *) .fancy-button .circle {
+  background: #000;
+  /* Black circle in light mode */
+}
+
+:is(.light *) .fancy-button .icon {
+  color: #fff;
+  /* White icon in light mode */
+}
+
+:is(.light *) .fancy-button:hover .circle {
+  background-color: #8957e5;
+  /* Purple on hover in light mode */
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
