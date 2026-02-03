@@ -107,7 +107,7 @@ export default function Skills() {
                 { name: "Machine Learning", icon: Brain, color: "text-pink-400" },
                 { name: "Deep Learning", icon: Brain, color: "text-purple-500" },
                 { name: "NLP", icon: Brain, color: "text-violet-400" },
-                { name: "Computer Vision", icon: Brain, color: "text-fuchsia-400" },
+                { name: "Neural Nets", icon: Brain, color: "text-fuchsia-400" },
                 { name: "LLMs", icon: Brain, color: "text-indigo-400" },
               ].map((skill) => (
                 <motion.div
