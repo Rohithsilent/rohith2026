@@ -14,6 +14,7 @@ import urbanhero from "../../assets/Projectimages/urbanhero.jpeg";
 import bridge from "../../assets/Projectimages/bridge.jpeg";
 import docmind from "../../assets/Projectimages/docmind.png";
 import eduverse from "../../assets/Projectimages/eduverse.png";
+import pop from "../../assets/Projectimages/pop.png";
 import thor from "../../assets/images/Thor.jpg";
 
 // Additional projects can be added here
@@ -59,6 +60,17 @@ const projects = [
         github: "https://github.com/Rohithsilent/eduverse",
         live: "https://eduverse-nnb0.onrender.com",
         image: eduverse
+    },
+
+    {
+        id: "05",
+        title: "Pulse of Public",
+        subtitle: "AI-Powered YouTube Sentiment & Insights Platform",
+        stacks: ["Python", "Streamlit", "Google Gemini AI", "YouTube Data API",],
+        desc: "Pulse of Public is an AI-powered analytics platform that transforms YouTube comments into actionable creator insights. It performs sentiment analysis, generates Gemini AI–driven recommendations, and visualizes audience feedback.",
+        github: "https://github.com/Rohithsilent/P_o_P",
+        live: "https://pulseofpublic.streamlit.app/",
+        image: pop
     }
 
 

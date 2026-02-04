@@ -230,7 +230,7 @@ export default function Hero() {
             <span className="text-accent font-medium">
               intelligent, scalable, and high-performance
             </span>{" "}
-            mobile experiences.
+            mobile & web experiences.
           </p>
         </StaggerItem>
 
