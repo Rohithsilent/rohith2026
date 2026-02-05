@@ -12,7 +12,7 @@ import TwitterXIcon from "@/components/ui/twitter-x-icon";
 // Assuming paths are relative to this file, we need to adjust ../assets to ../../assets
 import urbanhero from "../../assets/Projectimages/urbanhero.jpeg";
 import bridge from "../../assets/Projectimages/bridge.jpeg";
-import docmind from "../../assets/Projectimages/docmind.png";
+import docmind from "../../assets/Projectimages/docmind-tzug.onrender.com_user_dashboard.png";
 import eduverse from "../../assets/Projectimages/eduverse.png";
 import pop from "../../assets/Projectimages/pop.png";
 import thor from "../../assets/images/Thor.jpg";
