@@ -16,6 +16,7 @@ import docmind from "../../assets/Projectimages/docmind-tzug.onrender.com_user_d
 import eduverse from "../../assets/Projectimages/eduverse.png";
 import pop from "../../assets/Projectimages/pop.png";
 import thor from "../../assets/images/Thor.jpg";
+import travelbuddy from "../../assets/Projectimages/travelbuddy.png";
 
 // Additional projects can be added here
 const projects = [
@@ -40,8 +41,19 @@ const projects = [
         image: bridge,
         imageFit: "fill"
     },
+
     {
         id: "03",
+        title: "Travel Buddy",
+        subtitle: "Group Travel Planning Application",
+        stacks: ["React.js", "Firebase"],
+        desc: "Travel Buddy is a modern, feature-rich group travel planning application designed to make organizing trips with friends seamless and enjoyable.",
+        github: "Private",
+        live: "https://travel-buddy-seventy.vercel.app/",
+        image: travelbuddy
+    },
+    {
+        id: "04",
         title: "DocMind",
         subtitle: "Healthcare Web Application",
         stacks: ["React.js", "Firebase"],
@@ -52,7 +64,7 @@ const projects = [
     },
 
     {
-        id: "04",
+        id: "05",
         title: "EduVerse",
         subtitle: "AI-Powered Learning Platform",
         stacks: ["Node.js", "Express.js", "EJS", "Firebase"],
@@ -63,7 +75,7 @@ const projects = [
     },
 
     {
-        id: "05",
+        id: "06",
         title: "Pulse of Public",
         subtitle: "AI-Powered YouTube Sentiment & Insights Platform",
         stacks: ["Python", "Streamlit", "Google Gemini AI", "YouTube Data API",],

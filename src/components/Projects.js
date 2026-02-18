@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import urbanhero from "../assets/Projectimages/urbanhero.jpeg";
 import bridge from "../assets/Projectimages/bridge.jpeg";
 import docmind from "../assets/Projectimages/docmind.png";
+import travelbuddy from "../assets/Projectimages/travelbuddy.png";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -37,13 +38,13 @@ export default function Projects() {
     },
     {
       id: "03",
-      title: "DocMind",
-      subtitle: "Healthcare Web Application",
+      title: "Travel Buddy",
+      subtitle: "Group Travel Planning Application",
       stacks: ["React.js", "Firebase"],
-      desc: "An offline-first healthcare web application designed to manage medical documents and essential health information reliably, even in low-connectivity environments.",
-      github: "https://github.com/Rohithsilent/doc-mind-app",
-      live: "https://docmind-tzug.onrender.com/",
-      image: docmind
+      desc: "Travel Buddy is a modern, feature-rich group travel planning application designed to make organizing trips with friends seamless and enjoyable.",
+      github: "Private",
+      live: "https://travel-buddy-seventy.vercel.app/",
+      image: travelbuddy
     }
   ];
 
