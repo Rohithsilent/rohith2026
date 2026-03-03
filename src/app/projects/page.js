@@ -17,6 +17,7 @@ import eduverse from "../../assets/Projectimages/eduverse.png";
 import pop from "../../assets/Projectimages/pop.png";
 import thor from "../../assets/images/Thor.jpg";
 import travelbuddy from "../../assets/Projectimages/travelbuddy.png";
+import ragbot from "../../assets/Projectimages/ragbot.png";
 
 // Additional projects can be added here
 const projects = [
@@ -62,9 +63,19 @@ const projects = [
         live: "https://docmind-tzug.onrender.com/",
         image: docmind
     },
-
     {
         id: "05",
+        title: "RagBot",
+        subtitle: "Enterprise-Grade RAG Platform",
+        stacks: ["Next.js", "FastAPI", "Firebase", "Pinecone", "Google Gemini"],
+        desc: "An enterprise-grade Retrieval-Augmented Generation (RAG) platform featuring secure multi-tenant document isolation, context-aware chat memory, and a modern glassmorphic interface..",
+        github: "https://github.com/Rohithsilent/RagBot",
+        live: "https://rag-bot-omega.vercel.app/",
+        image: ragbot
+    },
+
+    {
+        id: "06",
         title: "EduVerse",
         subtitle: "AI-Powered Learning Platform",
         stacks: ["Node.js", "Express.js", "EJS", "Firebase"],
@@ -75,7 +86,7 @@ const projects = [
     },
 
     {
-        id: "06",
+        id: "07",
         title: "Pulse of Public",
         subtitle: "AI-Powered YouTube Sentiment & Insights Platform",
         stacks: ["Python", "Streamlit", "Google Gemini AI", "YouTube Data API",],
