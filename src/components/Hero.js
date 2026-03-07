@@ -10,7 +10,6 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
-import imgFace from "../assets/images/facecutouut.jpg";
 import imgFace2 from "../assets/images/facecutout2.jpg";
 import rohith from "../assets/images/rohith.jpeg";
 
