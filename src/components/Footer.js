@@ -101,7 +101,7 @@ export default function Footer() {
 
                 <div className="flex flex-row items-center justify-center gap-2 md:gap-4 text-sm md:text-base font-medium font-mono text-foreground/50 whitespace-nowrap">
                     <span className="text-accent/50">•</span>
-                    <span className="text-[#e9204f] font-bold">Cursed with clean code and infinite curiosity — Rohith</span>
+                    <span className="text-[#e9204f] font-bold">Cursed with clean code and infinite curiosity</span>
                     <span className="text-accent/50">•</span>
                     <span className="min-w-[100px] text-center">{time}</span>
                 </div>

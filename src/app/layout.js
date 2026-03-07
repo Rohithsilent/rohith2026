@@ -40,7 +40,31 @@ const caveat = Caveat({
 });
 
 export const metadata = {
-  title: "runApp(Rohith())",
+  title: "Rohith Pullola",
+  description: "A Flutter Developer & Applied ML Engineer focused on building intelligent, scalable, and high-performance mobile & web experiences.",
+  keywords: ["Rohith Pullola", "pullola rohith", "rohith", "p rohith", "rohith p", "Flutter Developer", "Machine Learning Engineer", "React", "Next.js", "Portfolio"],
+  openGraph: {
+    title: "Rohith Pullola | Flutter Developer & ML Engineer",
+    description: "A Flutter Developer & Applied ML Engineer focused on building intelligent, scalable, and high-performance mobile & web experiences.",
+    url: "https://rohithpullola.me",
+    siteName: "Rohith Pullola Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://rohithpullola.me/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Rohith Pullola - Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rohith Pullola | Flutter Developer & ML Engineer",
+    description: "A Flutter Developer & Applied ML Engineer focused on building intelligent, scalable, and high-performance mobile & web experiences.",
+    images: ["https://rohithpullola.me/og-image.jpeg"],
+  },
 };
 
 export default function RootLayout({ children }) {
