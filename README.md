@@ -1,6 +1,6 @@
 # Portfolio - Rohith Pullola
 
-> **runApp(Rohith())** - A modern, animated developer portfolio built with Next.js
+> A modern, animated developer portfolio built with Next.js
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -11,7 +11,7 @@
 
 A premium portfolio website showcasing my journey as a **Flutter Developer & Applied ML Developer**. Built with modern web technologies, featuring smooth animations, dark mode, and an interactive command palette.
 
-**Live Demo:** [Your Portfolio URL]
+**Live Demo:** [Rohith Pullola](https://rohithpullola.me)
 
 ## ✨ Features
 
