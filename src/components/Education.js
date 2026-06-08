@@ -9,7 +9,7 @@ export default function Education() {
             year: "2024 – 2027",
             institution: "CMR College of Engineering and Technology",
             degree: "B.Tech in Artificial Intelligence and Machine Learning",
-            location: "Mechal, Telangana",
+            location: "Medchal, Telangana",
             status: "Expected Graduation: May 2027"
         },
         {
